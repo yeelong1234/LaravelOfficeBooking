@@ -1,0 +1,67 @@
+@import 'primeflex/primeflex.scss';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'standard';
+
+h2{
+    @include styleclass('text-white');
+}
+
+label{
+    @include styleclass('text-white');
+}
+.summuryBox {
+    @include styleclass('w-5 h-7rem shadow-7 border-round relative m-3');
+}
+
+.buttonStyle {
+    @include styleclass('col-5 m-2 p-4 text-3xl cursor-pointer border-round shadow-7');
+    a{
+        span{
+            @include styleclass('text-3xl');
+        }
+        i{
+            @include styleclass('text-3xl');
+        }
+    }
+
+    :hover{
+        @include styleclass('bg-black color-white');
+    }
+}
+
+.listBox{
+    @include styleclass('bg-blue-200 shadow-7 overflow-x-auto p-2 gap-2 flex flex-column border-round-lg')
+}
+
+.fullListBox{
+    @include styleclass('listBox min-h-full max-h-30rem');
+
+}
+ 
+.tooltip {
+    position: relative;
+  }
+  
+  .tooltip::before {
+    content: attr(data-tooltip);
+    background-color: #000;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .tooltip:hover::before {
+    opacity: 1;
+  }
+  
